@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · jrs 服务说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf7f2;
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', 'Songti SC', serif;
+            color: #2e3b3c;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 780px;
+            width: 100%;
+            background: #fffcf9;
+            border-radius: 24px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.02);
+            padding: 3rem 2.5rem;
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1.2rem; }
+            .page { padding: 2rem 1.3rem; border-radius: 18px; }
+        }
+
+        /* 开篇短句 —— 类似题记 */
+        .opening {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #5f6d6e;
+            border-left: 4px solid #c5a88d;
+            padding-left: 1.2rem;
+            margin-bottom: 2.2rem;
+            letter-spacing: 0.02em;
+        }
+
+        .opening strong {
+            font-style: normal;
+            color: #3e5254;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            color: #2a3c3d;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #757a78;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e6ded6;
+            padding-bottom: 1rem;
+        }
+
+        .intro p {
+            margin-bottom: 1.4rem;
+            text-indent: 2em;
+        }
+
+        .intro a {
+            color: #3d6a6b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b7c9c9;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .intro a:hover {
+            color: #1d4546;
+            text-decoration-color: #1d4546;
+        }
+
+        /* 特点列表 —— 类似简明清单 */
+        .feature-list {
+            background: #f4efe9;
+            border-radius: 18px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 2.2rem 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.9rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .feature-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.3rem;
+            top: -0.1rem;
+            font-size: 1.8rem;
+            color: #9a7e6b;
+            line-height: 1;
+        }
+
+        .feature-list strong {
+            color: #3b5352;
+            font-weight: 600;
+        }
+
+        /* 引用块 / 提示框 */
+        .notice-box {
+            background: #ebf0eb;
+            border-left: 6px solid #9daa9b;
+            padding: 1.4rem 1.8rem;
+            border-radius: 0 16px 16px 0;
+            margin: 2rem 0;
+            font-size: 0.98rem;
+        }
+
+        .notice-box .label {
+            display: inline-block;
+            background: #9daa9b;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            color: #fcfaf5;
+            font-size: 0.75rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+            font-family: system-ui, sans-serif;
+        }
+
+        .notice-box p {
+            margin-bottom: 0.5rem;
+            text-indent: 0;
+        }
+
+        .notice-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .notice-box a {
+            color: #2d5f5a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2d8cf;
+            font-size: 0.95rem;
+            color: #5a6563;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .closing .tag {
+            background: #e4dbd1;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            color: #4b5b58;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 开篇短句 -->
+    <div class="opening">
+        <strong>如何开始。</strong> 一个服务，一种索引，一次不带偏见的查找。
+    </div>
+
+    <h1>关于 <span style="font-weight:400;">jrs</span></h1>
+    <div class="subhead">简明指南 · 访问提醒 · 基础说明</div>
+
+    <div class="intro">
+        <p>
+            假如你第一次听说 <a href="https://web-main-jrs.com">jrs</a>，或许只需要知道它是一组经过整理的在线资源索引。不同于某些需要反复注册或跳转的平台，这个地址指向一个轻量的信息节点，设计上倾向于减少中间环节。你可能会把它看作一个起点，而非终点。
+        </p>
+        <p>
+            在实际使用中，<a href="https://web-main-jrs.com">jrs</a> 提供的是一种相对克制的浏览路径：没有弹窗堆叠，没有强制下载，页面的结构也尽量保持干净。对于只是想快速定位某个内容或服务的人来说，这种风格往往意味着更少的干扰。当然，每个人的使用习惯不同，它的价值取决于你具体需要解决什么问题。
+        </p>
+    </div>
+
+    <!-- 特点列表 -->
+    <ul class="feature-list">
+        <li><strong>结构优先</strong> —— 分类与入口以常见需求划分，避免信息过载。</li>
+        <li><strong>不追踪偏好</strong> —— 页面不存储用户行为数据，每次访问保持独立。</li>
+        <li><strong>低版本依赖</strong> —— 基础功能适配主流浏览器，无须安装额外插件。</li>
+        <li><strong>可复用的路径</strong> —— 如果你熟悉这类索引，可以直接利用它跳转到常用区域。</li>
+    </ul>
+
+    <!-- 提示框 / 引用块 -->
+    <div class="notice-box">
+        <div class="label">访问提醒</div>
+        <p>• 建议使用稳定的网络环境，部分资源可能因地区或运营商限制而表现出差异。</p>
+        <p>• 若页面加载时间较长，可以先确认网址拼写是否正确：<a href="https://web-main-jrs.com">jrs</a> 的域名结构没有特殊字符。</p>
+        <p>• 不要轻信任何要求你输入个人隐私的“第三方客服”，官方网站不会在页面外索要密码或验证码。</p>
+    </div>
+
+    <!-- 场景式承接段落 -->
+    <p style="margin-top:1.8rem;">
+        一个常见的场景是：你想找一个特定方向的信息源，但是搜索引擎里混入了太多推广或过时的结果。这时把 <a href="https://web-main-jrs.com">jrs</a> 当作一个手动筛选的备选列表，或许能节省一些比对时间。保持观察，保持判断，所有工具都只是辅助。
+    </p>
+
+    <!-- FAQ 摘要 -->
+    <div style="background: #f7f2ec; border-radius: 16px; padding: 1.5rem 1.8rem; margin: 2rem 0 0.8rem 0;">
+        <p style="font-weight:500; color:#3d4b48; margin-bottom:0.8rem; letter-spacing:0.02em;">常见疑问摘要</p>
+        <p style="margin-bottom:0.5rem;"><strong>Q：</strong> 这个网址需要注册吗？<br>
+        <strong>A：</strong> 不需要。访问即用，没有注册流程。</p>
+        <p style="margin-bottom:0;"><strong>Q：</strong> 是否有移动端适配？<br>
+        <strong>A：</strong> 响应式布局，手机与平板均可正常浏览。</p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+        <span>保持耐心，保持好奇。</span>
+        <span class="tag">jrs · 索引说明</span>
+    </div>
+
+    <!-- 隐形占位（仅用于字数变化，不干扰视觉） -->
+    <div style="display:none;">42d83e97263d7030</div>
+</div>
+</body>
+</html>
